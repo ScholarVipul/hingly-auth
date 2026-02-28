@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Redirecting to app…</title>
+  <script>
+    (function() {
+      var hash = window.location.hash || '';
+      var search = window.location.search || '';
+      var appUrl = 'com.hingly.news_books_app://login-callback' + search + hash;
+      window.location.replace(appUrl);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to app…</p>
+  <p>If nothing happens, <a href="#" id="open-app">tap here to open the app</a>.</p>
+  <script>
+    document.getElementById('open-app').href = 'com.hingly.news_books_app://login-callback' + window.location.search + window.location.hash;
+  </script>
+</body>
+</html>
